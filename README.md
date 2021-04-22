@@ -51,11 +51,23 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 
 Add to these tests:
 
-1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. Write count of breach to the pdf from a csv containing the readings
-1. write the recorded trends to the pdf from a csv file
+1. 	action : Write minimum and maximum to the PDF  
+	from : csv file
+	when : containing positive and negative readings
+1. 	action : Write "Invalid input" to the PDF 
+	from : csv file
+	when :there is no expected data
+1.	action: Write count of breach to the pdf
+	from : csv file
+	when : file containing the readings
+1. 	action: Write the recorded trends to the pdf 
+	from : csv file
+	when : file containing the readings
+1.  action : Write None to the pdf
+	from : csv file
+	when : file does not containg data
 
+	
 (add more)
 
 ### Recognize Fakes and Reality

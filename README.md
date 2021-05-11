@@ -27,8 +27,9 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. Access to the csv file (admin rights)
-1. waiting time to access the file (time bound).
+2. Access to the csv file (admin rights)
+3. waiting time to access the file (time bound).
+4. Notification triggered by notifier once the report is available or not.
 
 (add more if needed)
 
@@ -80,8 +81,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability |update variable|  bool                      | mock 
-Report inaccessible server | csv file path |  bool                      | fake
-Find minimum and maximum   | csv data     | bool                        | fake
-Detect trend               | csv data     | bool                        | mock
-Write to PDF               | csv analysed data | bool                   | mock
+Notify report availability |update variable|  -                         | mock notify function is working
+Report inaccessible server | csv file path |  bool                      | fake localServer function
+Find minimum and maximum   | csv data      | bool                       | stubb the Find function
+Detect trend               | recorded min_max values | bool             | stubb Detect trend function
+Write to PDF               | csv analysed data | bool                   | stubb updatePDF function
